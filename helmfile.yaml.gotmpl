@@ -7,6 +7,10 @@ repositories:
 releases:
 - name: config-reloader
   chart: stakater/reloader
+{{- if neq .Values.example.version  "" }}
+  version: '{{`{{ .StateValues.versionOverrides | get .Release.Name }}`}}'
+{{- else }}
   version: v1.0.2
+{{- end }}
   inherit:
   - template: applications-default
