@@ -10,7 +10,7 @@ releases:
 {{- if neq .Values.example.version  "" }}
   version: '{{`{{ .StateValues.versionOverrides | get .Release.Name }}`}}'
 {{- else }}
-  #version: v1.0.2
+  version: v1.0.2
 {{- end }}
   inherit:
   - template: applications-default
