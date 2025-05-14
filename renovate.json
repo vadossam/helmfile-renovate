@@ -1,0 +1,24 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "enabledManagers": [
+        "helmfile"
+    ],
+    "packageRules": [
+        {
+            "description": "Auto-merge packages that are safe to upgrade",
+            "matchPackageNames": [
+                "renovate"
+            ],
+            "matchUpdateTypes": [
+                "minor",
+                "patch",
+                "pin",
+                "digest"
+            ],
+            "automerge": true
+        }
+    ],
+    "automergeSchedule": [
+        "* 7-16 * * 1-5"
+    ]
+}
